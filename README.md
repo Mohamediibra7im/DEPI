@@ -7,7 +7,6 @@ Education Management System is a Full Stack .NET project designed to streamline 
 - **Student Management**: Store and manage student details such as name, age, and contact information.
 - **Fee Management**: Track student payments, pending dues, and generate receipts.
 - **Lecture Scheduling**: Organize and display class schedules for students and faculty.
-- **Attendance Tracking**: Maintain student attendance records.
 - **Academic Performance**: Record and monitor student grades and progress.
 
 ## Technologies Used
