@@ -12,5 +12,6 @@ namespace CMS.Data
         public DbSet<Exams> Exams { get; set; }
         public DbSet<ExamQuestions> ExamQuestions { get; set; }
         public DbSet<Grades> Grades { get; set; }
+       public DbSet<College> Collage { get; set; }    
     }
 }
