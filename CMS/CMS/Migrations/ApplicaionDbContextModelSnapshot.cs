@@ -22,6 +22,109 @@ namespace CMS.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("CMS.Models.ExamQuestions", b =>
+                {
+                    b.Property<int>("ExamQuestionsId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ExamQuestionsId"));
+
+                    b.Property<int>("CourseId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ExamId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Marks")
+                        .HasColumnType("int");
+
+                    b.Property<string>("QuestionText")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("QuestionType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ExamQuestionsId");
+
+                    b.ToTable("ExamQuestions");
+                });
+
+            modelBuilder.Entity("CMS.Models.Exams", b =>
+                {
+                    b.Property<int>("ExamsId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ExamsId"));
+
+                    b.Property<int>("CourseId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Duration")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("ExamDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ExamName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Examtype")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("FacultyId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TotalMarks")
+                        .HasColumnType("int");
+
+                    b.HasKey("ExamsId");
+
+                    b.ToTable("Exams");
+                });
+
+            modelBuilder.Entity("CMS.Models.Grades", b =>
+                {
+                    b.Property<int>("GradesId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("GradesId"));
+
+                    b.Property<int>("CourseId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("DateRecorded")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("ExamId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Grade")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("MarksObtained")
+                        .HasColumnType("int");
+
+                    b.Property<string>("StudentId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("TotalMarks")
+                        .HasColumnType("int");
+
+                    b.HasKey("GradesId");
+
+                    b.ToTable("Grades");
+                });
+
             modelBuilder.Entity("CMS.Models.Students", b =>
                 {
                     b.Property<int>("Id")

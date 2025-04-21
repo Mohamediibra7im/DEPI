@@ -9,5 +9,8 @@ namespace CMS.Data
         {
         }
         public DbSet<Students> Students { get; set; }
+        public DbSet<Exams> Exams { get; set; }
+        public DbSet<ExamQuestions> ExamQuestions { get; set; }
+        public DbSet<Grades> Grades { get; set; }
     }
 }
