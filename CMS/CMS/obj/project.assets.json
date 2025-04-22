@@ -4452,23 +4452,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mi404\\.nuget\\packages\\": {},
+    "C:\\Users\\Ahmed khairy\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Egypt Digital Pioneers Intiative\\Final Project\\Project-Repo\\DEPI\\CMS\\CMS\\CMS.csproj",
+      "projectUniqueName": "D:\\GraduationProject\\DEPI\\CMS\\CMS\\CMS.csproj",
       "projectName": "CMS",
-      "projectPath": "D:\\Egypt Digital Pioneers Intiative\\Final Project\\Project-Repo\\DEPI\\CMS\\CMS\\CMS.csproj",
-      "packagesPath": "C:\\Users\\mi404\\.nuget\\packages\\",
-      "outputPath": "D:\\Egypt Digital Pioneers Intiative\\Final Project\\Project-Repo\\DEPI\\CMS\\CMS\\obj\\",
+      "projectPath": "D:\\GraduationProject\\DEPI\\CMS\\CMS\\CMS.csproj",
+      "packagesPath": "C:\\Users\\Ahmed khairy\\.nuget\\packages\\",
+      "outputPath": "D:\\GraduationProject\\DEPI\\CMS\\CMS\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\mi404\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Ahmed khairy\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

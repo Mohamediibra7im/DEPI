@@ -18,8 +18,5 @@ namespace CMS.Models
         public string Address { get; set; }
         [Column(TypeName = "decimal(3,2)")]
         public decimal GPA { get; set; }
-
-
-
     }
 }
