@@ -1,0 +1,16 @@
+C:\Users\hp\OneDrive\Desktop\Project\DEPI\CMS\CMS.BLL\obj\Debug\net8.0\CMS.BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\OneDrive\Desktop\Project\DEPI\CMS\CMS.BLL\obj\Debug\net8.0\CMS.BLL.AssemblyInfoInputs.cache
+C:\Users\hp\OneDrive\Desktop\Project\DEPI\CMS\CMS.BLL\obj\Debug\net8.0\CMS.BLL.AssemblyInfo.cs
+C:\Users\hp\OneDrive\Desktop\Project\DEPI\CMS\CMS.BLL\obj\Debug\net8.0\CMS.BLL.csproj.CoreCompileInputs.cache
+C:\Users\hp\OneDrive\Desktop\Project\DEPI\CMS\CMS.BLL\obj\Debug\net8.0\CMS.BLL.sourcelink.json
+C:\Users\hp\OneDrive\Desktop\Project\DEPI\CMS\CMS.BLL\bin\Debug\net8.0\CMS.BLL.deps.json
+C:\Users\hp\OneDrive\Desktop\Project\DEPI\CMS\CMS.BLL\bin\Debug\net8.0\CMS.BLL.dll
+C:\Users\hp\OneDrive\Desktop\Project\DEPI\CMS\CMS.BLL\bin\Debug\net8.0\CMS.BLL.pdb
+C:\Users\hp\OneDrive\Desktop\Project\DEPI\CMS\CMS.BLL\bin\Debug\net8.0\CMS.DataAccess.dll
+C:\Users\hp\OneDrive\Desktop\Project\DEPI\CMS\CMS.BLL\bin\Debug\net8.0\CMS.DataAccess.pdb
+C:\Users\hp\OneDrive\Desktop\Project\DEPI\CMS\CMS.BLL\obj\Debug\net8.0\CMS.BLL.csproj.AssemblyReference.cache
+C:\Users\hp\OneDrive\Desktop\Project\DEPI\CMS\CMS.BLL\obj\Debug\net8.0\CMS.BLL.csproj.Up2Date
+C:\Users\hp\OneDrive\Desktop\Project\DEPI\CMS\CMS.BLL\obj\Debug\net8.0\CMS.BLL.dll
+C:\Users\hp\OneDrive\Desktop\Project\DEPI\CMS\CMS.BLL\obj\Debug\net8.0\refint\CMS.BLL.dll
+C:\Users\hp\OneDrive\Desktop\Project\DEPI\CMS\CMS.BLL\obj\Debug\net8.0\CMS.BLL.pdb
+C:\Users\hp\OneDrive\Desktop\Project\DEPI\CMS\CMS.BLL\obj\Debug\net8.0\ref\CMS.BLL.dll
