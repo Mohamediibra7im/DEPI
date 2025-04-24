@@ -4,18 +4,17 @@
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
 
-# Ignore build output
-bin/
-obj/
+# Ignore all bin and obj folders at any depth
+**/bin/
+**/obj/
 
 # Ignore user-specific project files
 *.user
-*.suo
 
-# Ignore build artifacts
+# Ignore compiled binaries
 *.dll
 *.exe
-*.pdb
+
 
 
 # User-specific files
