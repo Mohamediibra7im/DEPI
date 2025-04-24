@@ -417,3 +417,8 @@ D:\GraduationProject\DEPI\CMS\CMS\obj\Debug\net8.0\refint\CMS.dll
 D:\GraduationProject\DEPI\CMS\CMS\obj\Debug\net8.0\CMS.pdb
 D:\GraduationProject\DEPI\CMS\CMS\obj\Debug\net8.0\CMS.genruntimeconfig.cache
 D:\GraduationProject\DEPI\CMS\CMS\obj\Debug\net8.0\ref\CMS.dll
+C:\Users\hp\OneDrive\Desktop\Project\DEPI\CMS\CMS\bin\Debug\net8.0\CMS.BLL.dll
+C:\Users\hp\OneDrive\Desktop\Project\DEPI\CMS\CMS\bin\Debug\net8.0\CMS.DataAccess.dll
+C:\Users\hp\OneDrive\Desktop\Project\DEPI\CMS\CMS\bin\Debug\net8.0\CMS.BLL.pdb
+C:\Users\hp\OneDrive\Desktop\Project\DEPI\CMS\CMS\bin\Debug\net8.0\CMS.DataAccess.pdb
+C:\Users\hp\OneDrive\Desktop\Project\DEPI\CMS\CMS\bin\Debug\net8.0\AutoMapper.dll

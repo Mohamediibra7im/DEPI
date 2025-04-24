@@ -1,12 +1,11 @@
 {
   "Version": 1,
-  "Hash": "/sEzDn1Ftg/jSgWr6PuBK5cPfJlJjGiEK3p4ceKz2BY=",
+  "Hash": "LwjF0k+P0KjwRD4EOpLQ6Of9SBMMq2GXMh7alYfGjAI=",
   "Source": "CMS",
   "BasePath": "_content/CMS",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "Assets": []
 }
