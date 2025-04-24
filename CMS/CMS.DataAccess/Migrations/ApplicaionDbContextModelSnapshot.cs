@@ -44,7 +44,7 @@ namespace CMS.Migrations
 
                     b.HasKey("CollegeID");
 
-                    b.ToTable("Collage");
+                    b.ToTable("Collage", (string)null);
                 });
 
             modelBuilder.Entity("CMS.Models.Department", b =>
@@ -65,7 +65,7 @@ namespace CMS.Migrations
 
                     b.HasKey("DepartmentID");
 
-                    b.ToTable("Department");
+                    b.ToTable("Department", (string)null);
                 });
 
             modelBuilder.Entity("CMS.Models.Enrollment", b =>
@@ -87,7 +87,7 @@ namespace CMS.Migrations
 
                     b.HasKey("EnrollmentId");
 
-                    b.ToTable("Enrollment");
+                    b.ToTable("Enrollment", (string)null);
                 });
 
             modelBuilder.Entity("CMS.Models.ExamQuestions", b =>
@@ -118,7 +118,7 @@ namespace CMS.Migrations
 
                     b.HasKey("ExamQuestionsId");
 
-                    b.ToTable("ExamQuestions");
+                    b.ToTable("ExamQuestions", (string)null);
                 });
 
             modelBuilder.Entity("CMS.Models.Exams", b =>
@@ -154,7 +154,7 @@ namespace CMS.Migrations
 
                     b.HasKey("ExamsId");
 
-                    b.ToTable("Exams");
+                    b.ToTable("Exams", (string)null);
                 });
 
             modelBuilder.Entity("CMS.Models.Fees", b =>
@@ -180,7 +180,7 @@ namespace CMS.Migrations
 
                     b.HasKey("FeeId");
 
-                    b.ToTable("Fees");
+                    b.ToTable("Fees", (string)null);
                 });
 
             modelBuilder.Entity("CMS.Models.Grades", b =>
@@ -216,7 +216,7 @@ namespace CMS.Migrations
 
                     b.HasKey("GradesId");
 
-                    b.ToTable("Grades");
+                    b.ToTable("Grades", (string)null);
                 });
 
             modelBuilder.Entity("CMS.Models.Section", b =>
@@ -251,7 +251,7 @@ namespace CMS.Migrations
 
                     b.HasKey("SectionId");
 
-                    b.ToTable("Sections");
+                    b.ToTable("Sections", (string)null);
                 });
 
             modelBuilder.Entity("CMS.Models.Students", b =>
@@ -270,14 +270,18 @@ namespace CMS.Migrations
                         .HasColumnType("date");
 
                     b.Property<DateOnly>("EnrollmentDate")
-                        .HasColumnType("date");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("date")
+                        .HasDefaultValueSql("GETDATE()");
 
                     b.Property<string>("FirstName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("GPA")
-                        .HasColumnType("decimal(3,2)");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("decimal(3,2)")
+                        .HasDefaultValue(4.0m);
 
                     b.Property<string>("IdNumber")
                         .IsRequired()
@@ -289,15 +293,17 @@ namespace CMS.Migrations
 
                     b.Property<string>("NationalId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(14)
+                        .HasColumnType("nvarchar(14)");
 
                     b.Property<string>("PhoneNumber")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(11)
+                        .HasColumnType("nvarchar(11)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Students");
+                    b.ToTable("Students", (string)null);
                 });
 #pragma warning restore 612, 618
         }

@@ -1,0 +1,15 @@
+C:\Users\hp\OneDrive\Desktop\Project\DEPI\CMS\CMS.DataAccess\obj\Debug\net8.0\CMS.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\OneDrive\Desktop\Project\DEPI\CMS\CMS.DataAccess\obj\Debug\net8.0\CMS.DataAccess.AssemblyInfoInputs.cache
+C:\Users\hp\OneDrive\Desktop\Project\DEPI\CMS\CMS.DataAccess\obj\Debug\net8.0\CMS.DataAccess.AssemblyInfo.cs
+C:\Users\hp\OneDrive\Desktop\Project\DEPI\CMS\CMS.DataAccess\obj\Debug\net8.0\CMS.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\hp\OneDrive\Desktop\Project\DEPI\CMS\CMS.DataAccess\obj\Debug\net8.0\CMS.DataAccess.sourcelink.json
+C:\Users\hp\OneDrive\Desktop\Project\DEPI\CMS\CMS.DataAccess\bin\Debug\net8.0\CMS.DataAccess.deps.json
+C:\Users\hp\OneDrive\Desktop\Project\DEPI\CMS\CMS.DataAccess\bin\Debug\net8.0\CMS.DataAccess.runtimeconfig.json
+C:\Users\hp\OneDrive\Desktop\Project\DEPI\CMS\CMS.DataAccess\bin\Debug\net8.0\CMS.DataAccess.dll
+C:\Users\hp\OneDrive\Desktop\Project\DEPI\CMS\CMS.DataAccess\bin\Debug\net8.0\CMS.DataAccess.pdb
+C:\Users\hp\OneDrive\Desktop\Project\DEPI\CMS\CMS.DataAccess\obj\Debug\net8.0\CMS.DataAccess.csproj.AssemblyReference.cache
+C:\Users\hp\OneDrive\Desktop\Project\DEPI\CMS\CMS.DataAccess\obj\Debug\net8.0\CMS.DataAccess.dll
+C:\Users\hp\OneDrive\Desktop\Project\DEPI\CMS\CMS.DataAccess\obj\Debug\net8.0\refint\CMS.DataAccess.dll
+C:\Users\hp\OneDrive\Desktop\Project\DEPI\CMS\CMS.DataAccess\obj\Debug\net8.0\CMS.DataAccess.pdb
+C:\Users\hp\OneDrive\Desktop\Project\DEPI\CMS\CMS.DataAccess\obj\Debug\net8.0\CMS.DataAccess.genruntimeconfig.cache
+C:\Users\hp\OneDrive\Desktop\Project\DEPI\CMS\CMS.DataAccess\obj\Debug\net8.0\ref\CMS.DataAccess.dll
