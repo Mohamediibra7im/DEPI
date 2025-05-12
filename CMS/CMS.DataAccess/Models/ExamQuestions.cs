@@ -1,12 +1,20 @@
-﻿namespace CMS.Models
+﻿using CMS.DataAccess.Models;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace CMS.Models
 {
     public class ExamQuestions
     {
         public int ExamQuestionsId { get; set; } // Primary Key
         public string QuestionText { get; set; }
-        public string QuestionType { get; set; } // Ex: MCQ, True/False, Short Answer
+        public QuestionType QuestionType { get; set; }
+
         public int Marks { get; set; }
-        public string ExamId { get; set; }    // -> Foreign key to Exams table
-        public int CourseId { get; set; }     // -> Foreign key to Courses table
+        public int ExamId { get; set; }
+       
+        public virtual Exams ? exams { get; set; }
+        public virtual ICollection<ExamOption> Options { get; set; }
+
     }
 }
