@@ -31,17 +31,31 @@ namespace CMS.DataAccess.Repository
         //return query.FirstOrDefault();
         //}
 
-        public T GetById(int id)
-        {
-            return dbSet.Find(id);
-        }
-
-        public IEnumerable<T> GetAll()
+        public T GetSingle(Expression<Func<T, bool>>? filter = null, params Expression<Func<T, object>>[]? includes)
         {
             IQueryable<T> query = dbSet;
 
-            return query.ToList();
+            if (includes != null)
+            {
+                foreach (var include in includes)
+                    query = query.Include(include);
+            }
+            return filter != null ? query.FirstOrDefault(filter) : query.FirstOrDefault();
         }
+
+        public IEnumerable<T> GetAll(Expression<Func<T, bool>>? filter = null, params Expression<Func<T, object>>[]? includes)
+        {
+            IQueryable<T> query = dbSet;
+
+            if (includes != null)
+            {
+                foreach (var include in includes)
+                    query = query.Include(include);
+
+            }
+            return filter != null ? query.Where(filter).ToList() : query.ToList();
+        }
+
 
         public void Remove(T item)
         {

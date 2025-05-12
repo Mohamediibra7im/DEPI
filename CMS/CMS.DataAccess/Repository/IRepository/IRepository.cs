@@ -9,10 +9,10 @@ namespace CMS.DataAccess.Repository.IRepository
 {
     public interface IRepository<T> where T : class
     {
-        IEnumerable<T> GetAll();
-        //T Get(Expression<Func<T, bool>> filter);
+        T GetSingle(Expression<Func<T, bool>>? filter = null, params Expression<Func<T, object>>[]? includes);
+        IEnumerable<T> GetAll(Expression<Func<T, bool>>? filter = null, params Expression<Func<T, object>>[]? includes);
 
-        T GetById(int id);
+
         void Add(T item);
 
         void Remove(T item);
