@@ -22,6 +22,31 @@ namespace CMS.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("CMS.DataAccess.Models.Courses", b =>
+                {
+                    b.Property<int>("CourseId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CourseId"));
+
+                    b.Property<string>("CourseCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CourseName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<int>("Credits")
+                        .HasColumnType("int");
+
+                    b.HasKey("CourseId");
+
+                    b.ToTable("Courses");
+                });
+
             modelBuilder.Entity("CMS.Models.College", b =>
                 {
                     b.Property<int>("CollegeID")
@@ -44,7 +69,7 @@ namespace CMS.Migrations
 
                     b.HasKey("CollegeID");
 
-                    b.ToTable("Collage", (string)null);
+                    b.ToTable("Collage");
                 });
 
             modelBuilder.Entity("CMS.Models.Department", b =>
@@ -65,7 +90,7 @@ namespace CMS.Migrations
 
                     b.HasKey("DepartmentID");
 
-                    b.ToTable("Department", (string)null);
+                    b.ToTable("Department");
                 });
 
             modelBuilder.Entity("CMS.Models.Enrollment", b =>
@@ -87,7 +112,29 @@ namespace CMS.Migrations
 
                     b.HasKey("EnrollmentId");
 
-                    b.ToTable("Enrollment", (string)null);
+                    b.ToTable("Enrollment");
+                });
+
+            modelBuilder.Entity("CMS.Models.ExamOption", b =>
+                {
+                    b.Property<int>("OptionId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("OptionId"));
+
+                    b.Property<string>("OptionText")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("QuestionId")
+                        .HasColumnType("int");
+
+                    b.HasKey("OptionId");
+
+                    b.HasIndex("QuestionId");
+
+                    b.ToTable("ExamOption");
                 });
 
             modelBuilder.Entity("CMS.Models.ExamQuestions", b =>
@@ -98,27 +145,30 @@ namespace CMS.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ExamQuestionsId"));
 
-                    b.Property<int>("CourseId")
+                    b.Property<int?>("CorrectOptionId")
                         .HasColumnType("int");
 
-                    b.Property<string>("ExamId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Marks")
+                    b.Property<int>("ExamId")
                         .HasColumnType("int");
+
+                    b.Property<int?>("ExamsId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("Marks")
+                        .HasColumnType("decimal(5,2)");
 
                     b.Property<string>("QuestionText")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("QuestionType")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("QuestionType")
+                        .HasColumnType("int");
 
                     b.HasKey("ExamQuestionsId");
 
-                    b.ToTable("ExamQuestions", (string)null);
+                    b.HasIndex("ExamsId");
+
+                    b.ToTable("ExamQuestions");
                 });
 
             modelBuilder.Entity("CMS.Models.Exams", b =>
@@ -132,29 +182,24 @@ namespace CMS.Migrations
                     b.Property<int>("CourseId")
                         .HasColumnType("int");
 
-                    b.Property<int>("Duration")
+                    b.Property<int>("DurationMinutes")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("ExamDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("ExamName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Examtype")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("FacultyId")
-                        .HasColumnType("int");
 
                     b.Property<int>("TotalMarks")
                         .HasColumnType("int");
 
                     b.HasKey("ExamsId");
 
-                    b.ToTable("Exams", (string)null);
+                    b.HasIndex("CourseId");
+
+                    b.ToTable("Exams");
                 });
 
             modelBuilder.Entity("CMS.Models.Fees", b =>
@@ -180,7 +225,7 @@ namespace CMS.Migrations
 
                     b.HasKey("FeeId");
 
-                    b.ToTable("Fees", (string)null);
+                    b.ToTable("Fees");
                 });
 
             modelBuilder.Entity("CMS.Models.Grades", b =>
@@ -216,7 +261,7 @@ namespace CMS.Migrations
 
                     b.HasKey("GradesId");
 
-                    b.ToTable("Grades", (string)null);
+                    b.ToTable("Grades");
                 });
 
             modelBuilder.Entity("CMS.Models.Section", b =>
@@ -251,10 +296,10 @@ namespace CMS.Migrations
 
                     b.HasKey("SectionId");
 
-                    b.ToTable("Sections", (string)null);
+                    b.ToTable("Sections");
                 });
 
-            modelBuilder.Entity("CMS.Models.Students", b =>
+            modelBuilder.Entity("CMS.Models.User", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -303,7 +348,53 @@ namespace CMS.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Students", (string)null);
+                    b.ToTable("Students");
+                });
+
+            modelBuilder.Entity("CMS.Models.ExamOption", b =>
+                {
+                    b.HasOne("CMS.Models.ExamQuestions", "Question")
+                        .WithMany("Options")
+                        .HasForeignKey("QuestionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Question");
+                });
+
+            modelBuilder.Entity("CMS.Models.ExamQuestions", b =>
+                {
+                    b.HasOne("CMS.Models.Exams", "exams")
+                        .WithMany("ExamQuestions")
+                        .HasForeignKey("ExamsId");
+
+                    b.Navigation("exams");
+                });
+
+            modelBuilder.Entity("CMS.Models.Exams", b =>
+                {
+                    b.HasOne("CMS.DataAccess.Models.Courses", "Course")
+                        .WithMany("Exams")
+                        .HasForeignKey("CourseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Course");
+                });
+
+            modelBuilder.Entity("CMS.DataAccess.Models.Courses", b =>
+                {
+                    b.Navigation("Exams");
+                });
+
+            modelBuilder.Entity("CMS.Models.ExamQuestions", b =>
+                {
+                    b.Navigation("Options");
+                });
+
+            modelBuilder.Entity("CMS.Models.Exams", b =>
+                {
+                    b.Navigation("ExamQuestions");
                 });
 #pragma warning restore 612, 618
         }
